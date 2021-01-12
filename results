@@ -1,0 +1,33 @@
+#results---------------------------------------------------------------------------------------------------------------
+
+#Total words 290419
+y_train (1280000, 1)
+y_test (320000, 1)
+x_train (1280000, 300)
+y_train (1280000, 1)
+
+x_test (320000, 300)
+y_test (320000, 1)
+(290419, 300)
+2021-01-12 13:00:00.381204: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-12 13:00:00.385252: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, 300, 300)          87125700  
+_________________________________________________________________
+dropout (Dropout)            (None, 300, 300)          0         
+_________________________________________________________________
+lstm (LSTM)                  (None, 100)               160400    
+_________________________________________________________________
+dense (Dense)                (None, 1)                 101       
+=================================================================
+Total params: 87,286,201
+Trainable params: 160,501
+Non-trainable params: 87,125,700
+_________________________________________________________________
+2021-01-12 13:00:02.468787: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+Epoch 1/8
+1125/1125 [==============================] - 6056s 5s/step - loss: 0.5279 - accuracy: 0.7316 - val_loss: 0.4641 - val_accuracy: 0.7793
